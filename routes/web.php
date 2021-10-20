@@ -19,13 +19,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home', [
-        "tittle" => "Home"
+        "title" => "Home"
     ]);
 });
 
 Route::get('/about', function () {
     return view('about', [
-        "tittle" => "About",
+        "title" => "About",
         "name" => "Raditya Gilang Wicaksono",
         "image" => "doodoosonic-0t7PNNZlTC0-unsplash.jpg"
     ]);
@@ -33,6 +33,13 @@ Route::get('/about', function () {
 
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
+
+Route::get('/categories', function(){
+    return view('categories', [
+        'title' => 'Post Categories',
+        'category' => Category::all()
+    ]);
+});
 
 Route::get('/categories/{category:slug}', function(Category $category) {
     return view('category', [
