@@ -13,7 +13,7 @@
             <a class="nav-link {{ ($tittle == "About") ? 'active' : '' }}" href="/about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ ($tittle == "Posts") ? 'active' : '' }}" href="/blog">Blog</a>
+            <a class="nav-link {{ ($tittle == "Posts") ? 'active' : '' }}" href="/posts">Blog</a>
           </li>
         </ul>
       </div>
