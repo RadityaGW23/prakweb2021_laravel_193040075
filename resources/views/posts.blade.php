@@ -54,7 +54,7 @@
                       <p class="card-text">{{ $post->excerpt }}</p>
                       <p>
                         <small class="text-muted">
-                            By. <a href="/posts?author={{  $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a> {{ $posts[0]->created_at->diffForHumans() }}
+                            By. <a href="/posts?author={{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a> {{ $posts[0]->created_at->diffForHumans() }}
                         </small>
                       </p>
                       <a href="/posts/{{ $post->slug }}" class="btn btn-primary">Read More</a>
